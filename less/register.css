@@ -1,0 +1,68 @@
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+}
+#main {
+  background-color: #fff;
+  flex: 1;
+}
+#main .register {
+  padding: .1rem;
+}
+#main .register .mui-input-row {
+  font-size: .14rem;
+}
+#main .register .mui-input-row::after {
+  left: 0;
+}
+#main .register .mui-input-row label {
+  line-height: .4rem;
+  padding: 0 ;
+  text-indent: 1em;
+  width: 25%;
+}
+#main .register .mui-input-row input {
+  text-indent: 0.1rem;
+  font-size: .14rem;
+  width: 75%;
+}
+#main .register .mui-input-row .verification {
+  width: 45%;
+  float: left;
+}
+#main .register .mui-input-row .btn-verification {
+  padding: 0;
+  float: left;
+  width: 30%;
+  height: .3rem;
+  margin-top: .05rem;
+  background-color: #ffa631;
+  border-color: #ffa631;
+}
+#main .register::after {
+  background-color: transparent;
+}
+#main .btn-register {
+  background-color: #ffa631;
+  width: 100%;
+  margin-top: .1rem;
+  border-color: #ffa631;
+  font-size: .18rem;
+}
+#footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+/*toast信息提示*/
+.mui-toast-container {
+  bottom: 20% !important;
+}
+.mui-toast-message {
+  opacity: 0.6;
+  color: #fff;
+  width: 180px;
+  padding: 10px 5px 10px 5px;
+}

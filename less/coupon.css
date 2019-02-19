@@ -1,0 +1,20 @@
+#main .coupon-list {
+  padding: .1rem .05rem;
+}
+#main .coupon-list ul {
+  margin: 0;
+}
+#main .coupon-list ul li {
+  padding: .05rem;
+  box-sizing: border-box;
+}
+#main .coupon-list ul li a {
+  border: 1px solid #ccc;
+}
+#main .coupon-list ul li a img {
+  width: 100%;
+  display: block;
+}
+#main .coupon-list ul li a .mui-media-body {
+  color: #666;
+}

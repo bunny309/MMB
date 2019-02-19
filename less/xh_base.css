@@ -1,0 +1,227 @@
+html {
+  font-size: 26.66667vw;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* 移动端按住元素取消高亮背景色 */
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font: 0.14rem/100% '微软雅黑', '宋体', '黑体';
+  background-color: #fff;
+  color: black;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666666;
+}
+img {
+  border: none;
+  vertical-align: middle;
+}
+input,
+button,
+select {
+  border: none;
+  outline: none;
+}
+i {
+  font-style: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.clearfix::after {
+  content: '';
+  display: none;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
+.border-top {
+  border-top: 1px solid #cccccc;
+}
+.border-right {
+  border-right: 1px solid #cccccc;
+}
+.border-bottom {
+  border-bottom: 1px solid #cccccc;
+}
+.border-left {
+  border-left: 1px solid #cccccc;
+}
+#header {
+  position: fixed;
+  z-index: 999;
+  background-color: #fff;
+}
+#header .header-box {
+  height: 0.45rem;
+  width: 100vw;
+  display: flex;
+  padding: 0.09rem 0.1rem;
+  border-bottom: 1px solid #cccccc;
+}
+#header .header-box .logo {
+  width: 0.85rem;
+  background-image: url(http://static.manmanbuy.com/m/img/mlogo.png);
+  background-repeat: no-repeat;
+  background-size: 0.84rem 0.25rem;
+  overflow: hidden;
+  text-indent: -999px;
+}
+#header .header-box .search {
+  flex: 1;
+}
+#header .header-box .search form {
+  padding: 0 0.2rem;
+  position: relative;
+}
+#header .header-box .search form i {
+  position: absolute;
+  top: 0.06rem;
+  left: 0.3rem;
+  color: #ccc;
+}
+#header .header-box .search form input {
+  height: 0.28rem;
+  font-size: 0.12rem;
+  border-radius: 0.2rem;
+  text-align: left;
+  padding-left: 0.3rem;
+  background-color: #eee;
+  margin-bottom: 0;
+}
+#header .header-box .download {
+  width: 0.4rem;
+  height: 0.2rem;
+  margin-top: 0.02rem;
+  border: 1px solid #f04848;
+  border-radius: 0.2rem;
+}
+#header .header-box .download p {
+  color: #f04848;
+  text-align: center;
+  margin-bottom: 0;
+  line-height: 0.18rem;
+  font-size: 0.12rem;
+}
+#header .header-scroll {
+  border-bottom: 1px solid #cccccc;
+  height: 0.4rem;
+}
+#header .header-scroll ul {
+  height: 100%;
+}
+#header .header-scroll ul li {
+  padding: 0 0.12rem;
+  font-weight: 600;
+  color: black;
+  position: relative;
+  height: 100%;
+  font-size: 0.14rem;
+  line-height: 0.4rem;
+}
+#header .header-scroll ul li.mui-active {
+  color: #ff9000;
+  border-bottom: 0;
+}
+#header .header-scroll ul li.mui-active::before {
+  content: '';
+  display: block;
+  height: 0.03rem;
+  width: 0.4rem;
+  background-color: #ff9000;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#main {
+  padding-top: 0.85rem;
+}
+#main #dots {
+  width: 0.4rem;
+  height: 0.4rem;
+  border: 0.02rem solid #b3b3b3;
+  border-radius: 50%;
+  position: fixed;
+  top: 1.5rem;
+  left: 0;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#main #dots > div {
+  width: 0.35rem;
+  height: 0.35rem;
+  position: absolute;
+  display: none;
+}
+#main #dots > div:nth-of-type(1) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#main #dots > div:nth-of-type(2) {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+#main #dots > div:nth-of-type(3) {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#main #dots > div:nth-of-type(4) {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+#main #dots > div img {
+  width: 100%;
+}
+#footer {
+  background-color: #232a34;
+  color: #ffffff;
+}
+#footer .footer-title {
+  height: 0.35rem;
+}
+#footer .footer-title div {
+  text-align: center;
+  line-height: 0.35rem;
+}
+#footer .footer-title div .fa-arrow-circle-up {
+  font-size: 0.14rem;
+  color: #ffffff;
+}
+#footer .footer-content {
+  width: 100%;
+  height: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+#footer .footer-content p {
+  font-size: 0.12rem;
+  margin-bottom: 0;
+  line-height: 0.2rem;
+}
+#footer .footer-content .footer-content-name {
+  color: #ccc;
+}
+#footer .footer-content .footer-content-name span {
+  color: red;
+}
