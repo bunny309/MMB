@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 完整视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买商城导航</title>
+    <!-- 引入站点图标 -->
+    <link rel="icon" href="../images/favicon.ico">
+    <!-- 引入第三方Mui的css -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 引入字体图标库 -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入自身的css -->
+    <link rel="stylesheet" href="../less/sitenav.css">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="header">
+        <div class="header-box">
+            <div class="logo">
+                <h1>慢慢买</h1>
+            </div>
+            <div class="search">
+                <form action="#">
+                    <i class="fa fa-search"></i>
+                    <input type="search" placeholder="商品比价、查历史价">
+                </form>
+            </div>
+            <div class="download">
+                <p>下载</p>
+            </div>
+        </div>
+        <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted header-scroll">
+            <ul class="mui-scroll header-scroll-box">
+                <li class="mui-control-item mui-active">
+                    首页
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- 主体部分 -->
+    <div id="main">
+        <h4>商城导航</h4>
+        <div class="list-group">
+            <div class="list-group-item">
+                <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt="">
+                <p>京东商城</p>
+            </div>
+            <div class="list-group-item">
+                <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt="">
+                <p>当当</p>
+            </div>
+            <div class="list-group-item">
+                <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt="">
+                <p>中国亚马逊</p>
+            </div>
+            <div class="list-group-item">
+                <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt="">
+                <p>小米官方商城</p>
+            </div>
+            <div class="list-group-item">
+                <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt="">
+                <p>华为官方商城</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div id="footer">
+        <div class="mui-row footer-title border-bottom border-top">
+            <div class="mui-col-xs-4 border-right">
+                登录
+            </div>
+            <div class="mui-col-xs-4 border-right">
+                注册
+            </div>
+            <div class="mui-col-xs-4 footer-up-top">
+                <i class="fa fa-arrow-circle-up"></i>
+                返回顶部
+            </div>
+        </div>
+        <div class="footer-content">
+            <p class="footer-content-name"><span>手机APP下载</span> 慢慢买手机版 -- 掌上比价平台</p>
+            <p class="footer-content-addres">m.manmanbuy.com </p>
+        </div>
+    </div>
+
+    <!-- 创建头部模板 -->
+    <script id="headerScroll" type="text/html">
+        {{each result val index}}
+        <li class="mui-control-item {{index == 10 ? 'mui-active' : ''}}" data-id='{{val.indexmenuId}}' data-href='{{val.titlehref}}'>
+            {{val.name}}
+        </li>
+        {{/each}}
+    </script>
+
+    <!-- 创建内容模板 -->
+    <script id="sitenavTpl" type="text/html">
+        {{each result val index}}
+         <div class="list-group-item" data-href='{{val.navHref}}'>
+             <img src="{{val.navImg}}" alt="">
+             <p>{{val.navTitle}}</p>
+         </div>
+        {{/each}}
+    </script>
+
+
+
+
+
+    <!-- 导入第三方Mui的js -->
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <!-- 引入jQuery -->
+    <script src="../lib/jQuery/jquery-1.12.4.min.js"></script>
+    <!-- 引入zepto -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <!-- 引入artTemplate的js 创建模板 渲染数据 -->
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <!-- 引入自身的js -->
+    <script src="../js/base.js"></script>
+    <script src="../js/sitenav.js"></script>
+</body>
+
+</html>
