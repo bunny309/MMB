@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <!-- 样式依赖 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../css/baicaijia.css">
+</head>
+
+<body>
+    <!-- 网页结构:  侧滑页面  + 主页面 -->
+    <!-- 侧滑结构的根容器 -->
+    <div class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+        <!-- 侧滑内容容器 -->
+        <aside class="mui-off-canvas-left">
+            <!-- 侧边内容区 -->
+            <div class="aside-container">
+                <!-- 主频道 -->
+                <div class="main-item">
+                    <ul>
+                        <li><img src="../images/1.png" alt=""><span>女生妆区</span></li>
+                        <li><img src="../images/2.png" alt=""><span>女士服饰</span></li>
+                        <li><img src="../images/3.png" alt=""><span>男士专区</span></li>
+                        <li><img src="../images/4.png" alt=""><span>运动专区</span></li>
+                    </ul>
+                </div>
+                <!-- 分频道 -->
+                <div class="other-item">
+                    <ul>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin mui-btn-success"></p><span>微信</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weibo mui-btn-danger"></p><span>微博</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin mui-btn-primary"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin mui-btn-warning"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin mui-btn-danger"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin mui-btn-royal"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin"></p><span>家电</span>
+                        </li>
+                        <li>
+                            <p class="mui-icon mui-icon-weixin"></p><span>家电</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 个人中心 -->
+                <div class="user-info">
+                    <div class="user-center"><i class="mui-icon mui-icon-contact"></i><span>个人中心</span></div>
+                    <div class="user-set"><i class="mui-icon mui-icon-gear"></i><span>设置</span></div>
+                </div>
+                <span class="mui-icon mui-icon-forward back"></span>
+            </div>
+        </aside>
+        <!-- 主页面内容容器 -->
+        <div class="mui-inner-wrap">
+            <!-- 主页面内容 -->
+            <div id="container">
+                <!-- 头部栏开 begin -->
+                <header id="header">
+                    <div>
+                        <div class="left channel">
+                            <p class="mui-icon mui-icon-bars"></p>
+                            <span>频道</span>
+                        </div>
+                        <div class="title">慢慢买-特卖汇</div>
+                        <div class="right search">
+                            <p class="mui-icon mui-icon-search"></p>
+                            <span>搜索</span>
+                        </div>
+                    </div>
+                </header>
+                <!-- 头部栏开 end -->
+                <!-- 主体内容 begin -->
+                <main id="main">
+
+                    <!-- 导航条区域 -->
+                    <nav class="nav">
+                        <!-- mui插件 -->
+                        <div class="scrollX mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                            <div class="mui-scroll nav-box">
+                                <a class="mui-control-item mui-active">
+                                    推荐
+                                </a>
+                                <a class="mui-control-item">
+                                    热点
+                                </a>
+                                <a class="mui-control-item">
+                                    北京
+                                </a>
+                                <a class="mui-control-item">
+                                    社会
+                                </a>
+                                <a class="mui-control-item">
+                                    娱乐
+                                </a>
+                                <a class="mui-control-item">
+                                    科技
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 分类按钮 -->
+                        <div id="category">
+                            <span class="mui-icon mui-icon-arrowdown"></span>
+                        </div>
+                    </nav>
+
+                    <!-- 商品区域 -->
+                    <section class="goods">
+                        
+                            <div class="iscroll">
+                                <!--这里放置真实显示的DOM内容-->
+                                <!-- 渲染内容 -->
+                                <ul class="mui-table-view content">
+
+                                    <li class="mui-table-view-cell mui-media">
+
+                                        <!-- 左 -->
+                                        <img class="mui-media-object mui-pull-left" src="../images/messi.jpg">
+                                        <!-- 右 -->
+                                        <div class="mui-media-body info">
+                                            <!-- 描述 -->
+                                            <div class="desc mui-ellipsis-2">
+                                                [包邮]双十一红包开启我的信息肺癌敖德萨 阿瑟东啊大苏打的撒大啊大撒大撒
+                                            </div>
+                                            <!-- 价格 -->
+                                            <div class="price">
+                                                <span class="now">券后￥<i>100.00</i></span>
+                                                <del class="old">￥<i>100.00</i></del>
+                                            </div>
+                                            <!-- 百分比进度条 -->
+                                            <div class="bar-info">
+                                                <div class="mui-progressbar">
+                                                    <span></span>
+                                                </div>
+                                                <p>已领<i>99</i>张</p>
+                                                <i class="ratio">77%</i>
+                                            </div>
+                                            <!-- 下单 -->
+                                            <div class="order">
+                                                <a href="javascript:;">点此领取15元优惠券</a>
+                                                <a href="javascript:;">去下单</a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media">
+
+                                        <!-- 左 -->
+                                        <img class="mui-media-object mui-pull-left" src="../images/messi.jpg">
+                                        <!-- 右 -->
+                                        <div class="mui-media-body info">
+                                            <!-- 描述 -->
+                                            <div class="desc mui-ellipsis-2">
+                                                [包邮]双十一红包开启我的信息肺癌敖德萨 阿瑟东啊大苏打的撒大啊大撒大撒
+                                            </div>
+                                            <!-- 价格 -->
+                                            <div class="price">
+                                                <span class="now">券后￥<i>100.00</i></span>
+                                                <del class="old">￥<i>100.00</i></del>
+                                            </div>
+                                            <!-- 百分比进度条 -->
+                                            <div class="bar-info">
+                                                <div class="mui-progressbar bar100">
+                                                    <span></span>
+                                                </div>
+                                                <p>已领<i>99</i>张</p>
+                                                <i class="ratio">77%</i>
+                                            </div>
+                                            <!-- 下单 -->
+                                            <div class="order">
+                                                <a href="javascript:;">点此领取15元优惠券</a>
+                                                <a href="javascript:;">去下单</a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media">
+
+                                        <!-- 左 -->
+                                        <img class="mui-media-object mui-pull-left" src="../images/messi.jpg">
+                                        <!-- 右 -->
+                                        <div class="mui-media-body info">
+                                            <!-- 描述 -->
+                                            <div class="desc mui-ellipsis-2">
+                                                [包邮]双十一红包开启我的信息肺癌敖德萨 阿瑟东啊大苏打的撒大啊大撒大撒
+                                            </div>
+                                            <!-- 价格 -->
+                                            <div class="price">
+                                                <span class="now">券后￥<i>100.00</i></span>
+                                                <del class="old">￥<i>100.00</i></del>
+                                            </div>
+                                            <!-- 百分比进度条 -->
+                                            <div class="bar-info">
+                                                <div class="mui-progressbar bar1">
+                                                    <span></span>
+                                                </div>
+                                                <p>已领<i>99</i>张</p>
+                                                <i class="ratio">77%</i>
+                                            </div>
+                                            <!-- 下单 -->
+                                            <div class="order">
+                                                <a href="javascript:;">点此领取15元优惠券</a>
+                                                <a href="javascript:;">去下单</a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media">
+
+                                        <!-- 左 -->
+                                        <img class="mui-media-object mui-pull-left" src="../images/messi.jpg">
+                                        <!-- 右 -->
+                                        <div class="mui-media-body info">
+                                            <!-- 描述 -->
+                                            <div class="desc mui-ellipsis-2">
+                                                [包邮]双十一红包开启我的信息肺癌敖德萨 阿瑟东啊大苏打的撒大啊大撒大撒
+                                            </div>
+                                            <!-- 价格 -->
+                                            <div class="price">
+                                                <span class="now">券后￥<i>100.00</i></span>
+                                                <del class="old">￥<i>100.00</i></del>
+                                            </div>
+                                            <!-- 百分比进度条 -->
+                                            <div class="bar-info">
+                                                <div class="mui-progressbar bar1">
+                                                    <span></span>
+                                                </div>
+                                                <p>已领<i>99</i>张</p>
+                                                <i class="ratio">77%</i>
+                                            </div>
+                                            <!-- 下单 -->
+                                            <div class="order">
+                                                <a href="javascript:;">点此领取15元优惠券</a>
+                                                <a href="javascript:;">去下单</a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                    </section>
+
+                    <!-- 登陆跳转 -->
+                    <!-- <section class="login">
+                        <a href="#">
+                            <span>登陆慢慢买APP 查看更多<i class="mui-icon mui-icon-forward"></i></span>
+                        </a>
+                    </section> -->
+                </main>
+                <!-- 主体内容 end -->
+            </div>
+            <!-- 返沪顶部 -->
+            <div class="to-top">
+                <img src="http://gw.alicdn.com/tfs/TB1GEyAqDtYBeNjy1XdXXXXyVXa-88-88.png_110x10000.jpg_.webp" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+<!-- 模板区 -->
+<script id="navTpl" type="text/template">
+    {{each result value index}}
+    <a href="javascript: void(0);" class="mui-control-item {{index == 1 ? 'mui-active' : ''}}" data-id="{{value.titleId}}">{{value.title}}</a>
+    {{/each}}
+</script>
+<script id="contentTpl" type="text/template">
+{{each result value index}}
+    <li class="mui-table-view-cell mui-media">
+
+        <!-- 左 -->
+        <img class="mui-media-object mui-pull-left" src="{{value.imgsrc}}">
+        <!-- 右 -->
+        <div class="mui-media-body info">
+            <!-- 描述 -->
+            <div class="desc">
+                [包邮] {{value.desc}}
+            </div>
+            <!-- 价格 -->
+            <div class="price">
+                <span class="now">券后<i>￥{{value.now}}</i></span>
+                <del class="old"><i>{{value.old}}</i></del>
+            </div>
+            <!-- 百分比进度条 -->
+            <div class="bar-info">
+                <div class="mui-progressbar bar{{index}}" data-ratio="{{value.ratio}}">
+                    <span></span>
+                </div>
+                <p>已领<i>{{value.ticketNum}}</i>张</p>
+                <i class="ratio">{{value.ratio}}%</i>
+            </div>
+            <!-- 下单 -->
+            <div class="order">
+                <a href="javascript:;">点此领取{{value.ticketVal}}元优惠券</a>
+                <a href="javascript:;">去下单</a>
+
+            </div>
+
+        </div>
+
+    </li>
+{{/each}}
+</script>
+</html>
+<!-- 页面js依赖文件 -->
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../js/iscroll.js"></script>
+<script src="../js/baicaijia.js"></script>
