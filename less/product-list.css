@@ -1,0 +1,60 @@
+@import 'czl-base.css';
+#main {
+  padding-top: .5rem;
+}
+#main .title {
+  font-weight: 500;
+}
+#main .title ul {
+  background: linear-gradient(#fff, #ddd);
+}
+#main .title ul li {
+  font-size: .16rem;
+}
+#main .title ul li::after {
+  height: 0;
+}
+#main .content .mui-table-view .mui-media-object {
+  line-height: 1rem;
+  max-width: 1rem;
+  height: 1rem;
+}
+#main .content .productlist {
+  position: relative;
+  height: 1.31rem;
+  overflow: hidden;
+  padding: .07rem .15rem;
+}
+#main .content .productlist .title {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+#main .content .productlist .title p {
+  color: #000;
+  position: absolute;
+  top: 16%;
+  padding: 0 .05rem;
+}
+#main .content .productlist .starlist {
+  margin-top: 0.1rem;
+  line-height: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+#main .content .productlist .starlist:nth-of-type(1) {
+  color: #ea3900;
+  font-size: .2rem;
+  margin-right: .2rem;
+}
+#main .content .productlist .starlist .star {
+  display: flex;
+  font-size: .14rem;
+  color: red;
+}
+#main .content .productlist .comment {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  font-size: .12rem;
+  color: #a1a1a1;
+}

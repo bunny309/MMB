@@ -1,0 +1,199 @@
+@main-color: #ff4e49;
+@border-color: #cccccc;
+
+// 设置根目录html的字体大小
+html {
+    font-size: 26.66667vw;
+}
+
+// 公共样式
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 移动端按住元素取消高亮背景色 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font: 0.14rem/100% '微软雅黑', '宋体', '黑体';
+    background-color: #f1f1f1;
+    color: black;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666666;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+form,
+input,
+button,
+select {
+    border: none;
+    outline: none;
+}
+
+i {
+    font-style: normal;
+}
+
+table {
+    // 合并边框模型
+    border-collapse: collapse;
+    // 相邻单位格的边框距离
+    border-spacing: 0;
+}
+
+.clearfix::after {
+    content: '';
+    display: none;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+// 自定义border边框
+.border-top {
+    border-top: 1px solid @border-color;
+}
+
+.border-right {
+    border-right: 1px solid @border-color;
+}
+
+.border-bottom {
+    border-bottom: 1px solid @border-color;
+}
+
+.border-left {
+    border-left: 1px solid @border-color;
+}
+
+// 头部样式
+#header {
+    position: fixed;
+    z-index: 999;
+    background-color: @main-color;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    .header-box {
+        height: 0.49rem;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.12rem 0.1rem;
+        .logo {
+           
+            width: 1.85rem;
+            height: 0.25rem;
+            background: url(../images/header_logo.png);
+            background-repeat: no-repeat;
+            background-size: 1.85rem 0.25rem;
+            overflow: hidden;
+            text-indent: -999px;
+        }
+        .app{
+            
+            width: .34rem;
+            height: 0.34rem;
+            img{
+                width: 100%;
+            }
+        }
+
+    }
+    .search-box{
+        height: .5rem;
+        display: flex;
+        line-height: .5rem;
+        padding: .1rem;
+        background-color: #fff;
+        // border: 1px solid #ccc;
+        
+        .search{
+            height: 0.3rem;
+            flex: 1;
+            background-color: #f1f1f1;
+            font-size: .13rem;
+            border-radius: .2rem;
+            margin-right: .1rem;
+            border: 1px solid #eee;
+        }
+        .button{
+            width: 0.63rem;
+            height: 0.3rem;
+            background-color: #565656;
+            color: #fff;
+            border-radius: .2rem;
+            font-size: .16rem;
+            line-height: .1rem;
+        }
+    }
+
+
+}
+
+#main{
+    padding-top: 1rem;
+    
+    background-color: #f1f1f1;
+}
+
+#footer {
+    background-color: #232a34;
+    color: #ffffff;
+    padding-top: ;
+    .footer-title {
+        height: 0.35rem;
+
+        div {
+            text-align: center;
+            line-height: 0.35rem;
+
+            .fa-arrow-circle-up {
+                font-size: 0.14rem;
+                color: #ffffff;
+            }
+        }
+    }
+
+    .footer-content {
+        width: 100%;
+        height: 0.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        p {
+            font-size: 0.12rem;
+            margin-bottom: 0;
+            line-height: 0.2rem;
+        }
+
+        .footer-content-name {
+            color: #ccc;
+
+            span {
+                color: red;
+            }
+        }
+    }
+}

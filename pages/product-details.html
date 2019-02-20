@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 完整视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买产品评论页面</title>
+    <!-- 引入图标 -->
+    <link rel="icon" href="../images/favicon.ico">
+    <!-- 引入第三方Mui的css -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 引入字体图标库 -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入自身的css -->
+    <link rel="stylesheet" href="../less/product-details.css">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="header">
+        <div class="header-box">
+            <div class="logo">
+                <h1>慢慢买</h1>
+            </div>
+            <div class="app">
+                <img src="../images/header_app.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 主体部分 -->
+    <div id="main">
+        <div class="title">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">首页>产品分类>产品评论</li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell mui-media productlist">
+                    <a href="javascript:;">
+                        <img class="mui-media-object mui-pull-left picone" src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png">
+                        <div class="mui-media-body title">
+                            <p>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</p>
+
+                        </div>
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="comment">
+            <div class="title">
+                <div class="star">
+                     <div class="uesr">用户: </div>
+                    <img src="../images/star.svg" alt="">
+                    <img src="../images/star.svg" alt="">
+                    <img src="../images/star.svg" alt="">
+                    <img src="../images/star.svg" alt="">
+                    <img src="../images/star.svg" alt="">
+                </div>
+                <span>评论日期</span>
+            </div>
+            <div class="word">
+                "奥克斯(AUX) KFR-25GW/FK01+3 1匹 挂壁式定速冷暖空调""奥克斯(AUX) KFR-25GW/FK01+3 1匹 挂壁式定速冷暖空调""奥克斯(AUX) KFR-25GW/FK01+3
+                1匹 挂壁式定速冷暖空调""奥克斯(AUX) KFR-25GW/FK01+3 1匹 挂壁式定速冷暖空调""奥克斯(AUX) KFR-25GW/FK01+3 1匹 挂壁式定速冷暖空调""奥克斯(AUX)
+            </div>
+            <div class="from">
+                jingd
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div id="footer">
+        <div class="mui-row footer-title border-bottom border-top">
+            <div class="mui-col-xs-4 border-right">
+                登录
+            </div>
+            <div class="mui-col-xs-4 border-right">
+                注册
+            </div>
+            <div class="mui-col-xs-4 footer-up-top">
+                <i class="fa fa-arrow-circle-up"></i>
+                返回顶部
+            </div>
+        </div>
+        <div class="footer-content">
+            <p class="footer-content-name"><span>手机APP下载</span> 慢慢买手机版 -- 掌上比价平台</p>
+            <p class="footer-content-addres">m.manmanbuy.com </p>
+        </div>
+    </div>
+
+    <script id="productTpl" type="text/html">
+        {{each result value index}}
+    <img class="mui-media-object mui-pull-left picone"{{@value.productImg}}
+          <div class="mui-media-body title">
+            <p>{{value.productName}}</p>
+                  
+           </div>
+                   
+    {{/each}}
+    
+    </script>
+    <script script id="commentTpl" type="text/html">
+        {{each result value index}}
+    <div class="title">
+                <div class="star">
+                     <div class="uesr">{{value.comName}}: </div>
+                    <img src="../images/star.svg" alt="">
+                    <img src="../images/star.svg" alt="">
+                    <img src="../images/star.svg" alt="">
+                    <img src="../images/star.svg" alt="">
+                    <img src="../images/star.svg" alt="">
+                </div>
+                <span>{{value.comTime}}</span>
+            </div>
+            <div class="word">
+               {{value.comContent}}
+            </div>
+            <div class="from">
+                  {{value.comFrom}}
+                </div>
+        </div>
+        {{/each}}
+        </script>
+
+    <!-- 导入第三方Mui的js -->
+    <script src="../lib/mui/js/mui.min.js"></script>
+    
+    <!-- 引入jQuery -->
+    <script src="../lib/jQuery/jquery-1.12.4.min.js"></script>
+    <!-- 引入zepto -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <!-- 引入artTemplate的js 创建模板 渲染数据 -->
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <!-- 引入自身的js -->
+    <script src="../js/base.js"></script>
+    <script src="../js/product-details.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+@import 'czl-base.css';
+#main .title {
+  font-weight: 500;
+}
+#main .title .first-list {
+  background-color: #f7f7f7;
+  font-size: .16rem;
+}
+#main .title .first-list::after {
+  height: 0;
+}
+#main .content .title .mui-navigate-right {
+  text-align: center;
+  background-color: #eee;
+}
+#main .content .title .mui-navigate-right.active {
+  background-color: #000;
+  color: #fff;
+}
+#main .content .title .mui-navigate-right::after {
+  display: none;
+}
+#main .content .brandlist .mui-table-view-cell {
+  height: .7rem;
+}
+#main .content .brandlist .mui-table-view-cell::after {
+  left: 0;
+}
+#main .content .brandlist .mui-table-view-cell:nth-of-type(1) i {
+  background-color: red;
+  color: #fff;
+}
+#main .content .brandlist .mui-table-view-cell:nth-of-type(2) i {
+  background-color: orange;
+  color: #fff;
+}
+#main .content .brandlist .mui-table-view-cell:nth-of-type(3) i {
+  background-color: green;
+  color: #fff;
+}
+#main .content .brandlist .mui-table-view-cell a {
+  display: block;
+  text-align: left;
+  background-color: #f7f7f7;
+}
+#main .content .brandlist .mui-table-view-cell a i {
+  position: absolute;
+  left: 0.15rem;
+  display: block;
+  width: 0.2rem;
+  height: 0.2rem;
+  background-color: #ccc;
+  line-height: .2rem;
+  text-align: center;
+}
+#main .content .brandlist .mui-table-view-cell a div {
+  font-size: .16rem;
+  color: #000;
+  margin-left: .5rem;
+}
+#main .content .brandlist .mui-table-view-cell a p {
+  margin-left: .5rem;
+  margin-top: .15rem;
+}
