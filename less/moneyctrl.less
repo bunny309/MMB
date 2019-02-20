@@ -1,0 +1,64 @@
+@import 'hy_base.less';
+
+// 主体内容样式
+
+#main {
+    ul {
+        li {
+            height: 1.28rem;
+
+            a {
+                display: flex;
+
+                >img {
+                    width: 1rem;
+                    height: 1rem;
+                }
+
+                .chy-body {
+                    flex: 1;
+
+                    .chy-top {
+                        white-space: normal;
+
+                        >span {
+                            color: #ff4e49;
+                        }
+                    }
+
+                    .chy-bottom {
+                        color: #8f8f94;
+                        margin-top: .4rem;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // 分页跳转样式
+    #paging {
+        display: flex;
+        background-color: #fff;
+        margin: .1rem 0;
+        padding: .1rem .3rem;
+
+        a {
+            flex: 1;
+            height: .35rem;
+            border-radius: .05rem;
+            background: #d4d4d4;
+        }
+
+        #selectAge {
+            flex: 1;
+            height: .35rem;
+            border: 1px solid rgb(186, 186, 186) !important;
+            margin: 0 .25rem;
+            line-height: .17rem;
+            -webkit-appearance: menulist;
+        }
+    }
+}
