@@ -1,0 +1,96 @@
+@import 'hy_base.less';
+
+#main {
+    padding-left: .2rem;
+    padding-right: .2rem;
+    .content {
+        .sauce {
+            text-align: center;
+            img {
+                max-width: 60%;
+            }
+            
+        }
+        .info {
+            margin: .12rem 0;
+            color: #999999;
+            font-size: .12rem;
+        }
+        h4 {
+            font-size: .2rem;
+            line-height: .3rem;
+            margin-top: .1rem;
+            color: #333;
+            text-align: left;
+        }
+        h5 {
+            font-size: .16rem;
+            line-height: .2rem;
+            color: #f85000;
+        }
+        .desc {
+            font-size: .16rem;
+            line-height: .24rem;
+            .part {
+                color: black;
+            }
+            .price {
+                color: black;
+            }
+        }
+        .btn-buy {
+            width: 2rem;
+            height: .4rem;
+            margin-top: .1rem;
+            margin-bottom: .2rem;
+        }
+    }
+    .comment {
+        margin-bottom: .3rem;
+        .tit {
+            margin-bottom: .1rem;
+            margin-top: .1rem;
+        }
+        .reply {
+            background-color: #f1f1f1;
+            .form {
+                #ctl00_ContentBody_txt_nr {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        #newcomment {
+            line-height: .3rem;
+        }
+        .list {
+            .ui-border-b {
+                display: flex;
+                margin-bottom: .15rem;
+                .userimg {
+                    width: .4rem;
+                    margin-right: .1rem;
+                    img {
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+                .con {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .name.clearfix {
+                        display: flex;
+                        justify-content: space-between;
+                        .username {
+                            color: cornflowerblue;
+                        }
+                        .time {
+                            color: #999999;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

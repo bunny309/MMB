@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../less/save-sale.css">
+    
+</head>
+
+<body>
+    <header id="header">
+            <div class="header-box">
+                    <div class="logo">
+                        <h1>慢慢买</h1>
+                    </div>
+                    <div class="search">
+                        <form action="#">
+                            <i class="fa fa-search"></i>
+                            <input type="search" placeholder="商品比价、查历史价">
+                        </form>
+                    </div>
+                    <div class="download">
+                        <p>下载</p>
+                    </div>
+                </div>
+                <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted header-scroll">
+                    <ul class="mui-scroll">
+                        <li class="mui-control-item mui-active">
+                            首页
+                        </li>
+                        <li class="mui-control-item">
+                            省钱控
+                        </li>
+                        <li class="mui-control-item">
+                            查历史价
+                        </li>
+                        <li class="mui-control-item">
+                            比价搜索
+                        </li>
+                        <li class="mui-control-item">
+                            国内折扣
+                        </li>
+                        <li class="mui-control-item">
+                            白菜价
+                        </li>
+                        <li class="mui-control-item">
+                            小时风云榜
+                        </li>
+                    </ul>
+                </div>
+    </header>
+    <main id="main">
+        <div class="content">
+            <div class="sauce"><img src="../images/ic_bcj.png" alt=""></div>
+            <div class="info">
+                <span class="store">苏宁易购</span>
+                <span class="time">09-28 16:10</span>
+                <span class="tips">大不列颠/慢慢买</span>
+            </div>
+            <h4>海天生抽酱油1900ml</h4>
+            <h5>10.9元包邮（需2人拼团）</h5>
+            <div class="desc">
+                <p class="part">海天是来自广东佛山的老字号调味品牌，至今已逾300年历史。 这款海天酱油选用优质黄豆经阳光酿晒发酵后制成。现代化技术保证全程无菌生产，安全可靠，鲜香味醇。</p>
+                <p class="price">苏宁现售价17.9元，可参与拼团活动，拼团好价的低至10.9元包邮，2人成团即可，近期好价，喜欢可入~~</p>
+            </div>
+            <button type="button" class="mui-btn mui-btn-danger btn-buy">前往购买</button>
+        </div>
+        <div class="comment"></div>
+    </main>
+    <footer id="footer">
+            <div class="mui-row footer-title border-bottom border-top">
+                    <div class="mui-col-xs-4 border-right">
+                        登录
+                    </div>
+                    <div class="mui-col-xs-4 border-right">
+                        注册
+                    </div>
+                    <div class="mui-col-xs-4 footer-up-top">
+                        <i class="fa fa-arrow-circle-up"></i>
+                        返回顶部
+                    </div>
+                </div>
+                <div class="footer-content">
+                    <p class="footer-content-name"><span>手机APP下载</span> 慢慢买手机版 -- 掌上比价平台</p>
+                    <p class="footer-content-addres">m.manmanbuy.com  </p>
+                </div>
+    </footer>
+    
+    <!-- 商品列表的模板 -->
+    <script type="text/html" id="tplContent">
+        {{each result value}}
+        <div class="content">
+                <div class="sauce">{{@value.productImgSm}}</div>
+                <div class="info">
+                    <span class="store">{{value.productFrom}}</span>
+                    <span class="time">{{value.productTime}}</span>
+                    <span class="tips">{{value.productTips}}</span>
+                </div>
+                <h4>{{value.productName}}</h4>
+                <h5>{{value.productPinkage}}包邮(需2人拼团)</h5>
+                <div class="desc">
+                    <p class="part">{{value.productInfo}}</p>
+                    <p class="price">{{value.productInfo1}}</p>
+                </div>
+                <button type="button" class="mui-btn mui-btn-danger btn-buy">前往购买</button>
+            </div>
+            <div class="comment">
+                {{@value.productComment}}
+            </div>
+        {{/each}}
+    </script>
+
+    
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/mui/js/mui.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../js/getdetails.js"></script>
+</body>
+
+</html>

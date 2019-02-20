@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../less/moneyctrl.css">
+</head>
+
+<body>
+    <header id="header">
+            <div class="header-box">
+                    <div class="logo">
+                        <h1>慢慢买</h1>
+                    </div>
+                    <div class="search">
+                        <form action="#">
+                            <i class="fa fa-search"></i>
+                            <input type="search" placeholder="商品比价、查历史价">
+                        </form>
+                    </div>
+                    <div class="download">
+                        <p>下载</p>
+                    </div>
+                </div>
+                <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted header-scroll">
+                    <ul class="mui-scroll">
+                        <li class="mui-control-item mui-active">
+                            首页
+                        </li>
+                        <li class="mui-control-item">
+                            省钱控
+                        </li>
+                        <li class="mui-control-item">
+                            查历史价
+                        </li>
+                        <li class="mui-control-item">
+                            比价搜索
+                        </li>
+                        <li class="mui-control-item">
+                            国内折扣
+                        </li>
+                        <li class="mui-control-item">
+                            白菜价
+                        </li>
+                        <li class="mui-control-item">
+                            小时风云榜
+                        </li>
+                    </ul>
+                </div>
+    </header>
+    <main id="main">
+        <!-- 引入mui图文列表 -->
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;" class="">
+                    <img class="mui-media-object mui-pull-left" src="../images/ic_cu.png">
+                    <div class="mui-media-body chy-body">
+                        <div class="chy-top">21日0点：adidas 阿迪达斯 Crazy Heat 男款篮球鞋
+                            <span>999元</span></div>
+                        <div class="mui-ellipsis chy-bottom">
+                            <span>天猫旗舰店 | 02-17 14:31</span>
+                            <span><i class="fa fa-commenting-o" aria-hidden="true"></i>"0"</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div id="paging">
+                <div class="mui-btn mui-btn-outlined" id="previous">上一页</div>
+                <select name="selectAge" id="selectAge">
+                </select>
+                <div class="mui-btn mui-btn-outlined" id="below">下一页</div>
+            </div>
+    </main>
+    <footer id="footer">
+            <div class="mui-row footer-title border-bottom border-top">
+                    <div class="mui-col-xs-4 border-right">
+                        登录
+                    </div>
+                    <div class="mui-col-xs-4 border-right">
+                        注册
+                    </div>
+                    <div class="mui-col-xs-4 footer-up-top">
+                        <i class="fa fa-arrow-circle-up"></i>
+                        返回顶部
+                    </div>
+                </div>
+                <div class="footer-content">
+                    <p class="footer-content-name"><span>手机APP下载</span> 慢慢买手机版 -- 掌上比价平台</p>
+                    <p class="footer-content-addres">m.manmanbuy.com  </p>
+                </div>
+    </footer>
+    
+    <!-- 商品列表的模板 -->
+    <script type="text/html" id="tplSaveMoney">
+        {{each result value}}
+        <li class="mui-table-view-cell mui-media">
+                <a href="save-sale.html?id={{value.productId}}">
+                    {{@value.productImgSm}}
+                    <div class="mui-media-body chy-body">
+                        <div class="chy-top">{{value.productName}}
+                        <span>{{value.productPinkage}}</span></div>
+                        <div class="mui-ellipsis chy-bottom">
+                            <span>{{value.productFrom}} | {{value.productTime}}</span>
+                            <span><i class="fa fa-commenting-o" aria-hidden="true"></i>{{value.productComCount.replace('有','').replace('人评论','')}}</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+
+    
+    
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/mui/js/mui.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../js/getmoneyctrl.js"></script>
+</body>
+
+</html>
