@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入第三方库MUI -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 引入字体图标库的css文件 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入自己的less文件 -->
+    <link rel="stylesheet" href="./less/category.css">
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="logo">
+            <a href=""><img src="images/header_logo.png" alt=""></a>
+            <a href=""><img src="images/header_app.png" alt=""></a>
+        </div>
+        <div class="search">
+            <form action="">
+                <input type="text" placeholder="请输入你想比价的商品">
+                <button type="button">搜索</button>
+            </form>
+        </div>
+    </header>
+
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <main id="main">
+                        <ul class="mui-table-view category"> 
+                           
+                        </ul>
+                        <div class="section2">
+                            <div class="title">
+                                <span>品牌排行</span>
+                                <a href=""><img src="images/more.png" alt=""></a>
+                            </div>
+                        </div>
+            </main>
+            <!-- 底部区域 -->
+            <footer id="footer">
+                <div class="foot-top mui-row">
+                    <a href="login.html" class="mui-col-xs-4">登录</a>
+                    <a href="register.html" class="mui-col-xs-4">注册</a>
+                    <a href="index.html" class="mui-col-xs-4">首页</a>
+                </div>
+                <div class="foot">
+                    <div class="load">
+                        <a href="#">
+                            手机APP下载
+                        </a>
+                        <span>慢慢买手机版 -- 掌上比价平台</span>
+                    </div>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+
+    <!-- 引入MUI的js文件 -->
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- 引入zepto -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入自己的js文件 -->
+    <script src="./js/category.js"></script>
+
+    <!-- 创建分类 模板 -->
+    <script id="categoryTpl" type="text/html">
+        {{ each result value index}}
+            <li class="mui-table-view-cell mui-collapse">
+                <a class="mui-navigate-right cate" href="#" data-id="{{value.titleId}}" data-index="1">{{value.title}}</a>
+                <div class="mui-collapse-content ">
+                    <ul class="mui-row productTitle">
+                    </ul>
+                </div>
+            </li>
+        {{ /each }}
+    </script>
+
+    <!-- 创建分类下的 子类模板 -->
+    <script id="childrenTpl" type="text/html">
+        {{ each result value index }}
+            <li class="mui-col-xs-4 small" data-caId="{{ value.categoryId}}"><a href="javascript: void(0)">{{ value.category }}</a></li>
+        {{ /each }}
+    </script>
+</body>
+</html>

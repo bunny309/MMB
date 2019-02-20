@@ -1,0 +1,226 @@
+html {
+  font-size: 26.6666vw;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: .14rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/* 头部区域 */
+#header .logo {
+  padding: .1rem .1rem .1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fe4e49;
+}
+#header .logo a {
+  display: block;
+}
+#header .logo a i {
+  color: #fff;
+  font-size: .22rem;
+  line-height: .3rem;
+}
+#header .logo a img {
+  display: block;
+  width: 1.85rem;
+  height: .25rem;
+}
+#header .logo a:last-of-type img {
+  width: .35rem;
+  height: .35rem;
+}
+#header .logo a:first-of-type {
+  padding-top: .05rem;
+}
+#header .logo span {
+  color: #fff;
+  font-size: .22rem;
+  font-weight: 700;
+  line-height: .35rem;
+}
+#header .search {
+  padding: .1rem;
+}
+#header .search form {
+  display: flex;
+  justify-content: space-between;
+}
+#header .search form input {
+  width: 2.85rem;
+  height: .3rem;
+  border-radius: .3rem;
+  border: none;
+  padding: 0 .2rem;
+  background-color: #f0f0f0;
+  margin-bottom: 0;
+}
+#header .search form input::placeholder {
+  font-size: .12rem;
+  color: #555555;
+}
+#header .search form button {
+  width: .63rem;
+  height: .3rem;
+  border-radius: .3rem;
+  border: none;
+  background-color: #555555;
+  color: #fff;
+}
+/* 底部区域 */
+#footer {
+  background-color: #222933;
+}
+#footer .foot-top {
+  display: flex;
+  border: 1px solid #717171;
+}
+#footer .foot-top a {
+  display: block;
+  color: #fff;
+  line-height: .35rem;
+  text-align: center;
+  width: 30%;
+  box-sizing: border-box;
+  border-right: 1px solid #717171;
+}
+#footer .foot-top .top {
+  width: 40%;
+  border-right: none;
+}
+#footer .foot-top .top img {
+  vertical-align: middle;
+}
+#footer .foot {
+  text-align: center;
+  font-size: .12rem;
+}
+#footer .foot .load {
+  padding: .15rem 0;
+}
+#footer .foot .load a {
+  display: inline-block;
+  color: #fe4e49;
+}
+#footer .foot .load span {
+  color: #bdbdbd;
+}
+#footer .foot p {
+  color: #506565;
+  padding-bottom: .2rem;
+}
+#header .list {
+  height: .4rem;
+  background-color: #e8e8e8;
+  padding: 0 .2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header .list .left {
+  display: inline-block;
+}
+#header .list button {
+  height: .3rem;
+  width: .6rem;
+  line-height: .3rem;
+  padding: 0;
+}
+#main .productDetail {
+  position: relative;
+}
+#main .productDetail p {
+  padding: 20px 20px 0;
+  margin-bottom: 0;
+}
+#main .productDetail .productImg {
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-left: 0.9rem;
+}
+#main .productDetail .shouCang {
+  width: .5rem;
+  position: absolute;
+  left: 50%;
+  margin-left: .9rem;
+  top: 50%;
+  margin-top: -0.2rem;
+}
+#main .productDetail .three {
+  text-align: center;
+  line-height: .3rem;
+  box-sizing: border-box;
+  border-top: 1px solid #c04c04;
+  border-bottom: 1px solid #c04c04;
+  margin-top: 30px;
+  color: #fff;
+}
+#main .productDetail .three div {
+  background-color: #fec52e;
+}
+#main .productDetail .three div:nth-of-type(2) {
+  border-left: 1px solid #c04c04;
+  border-right: 1px solid #c04c04;
+}
+#main .productDetail .price {
+  line-height: .4rem;
+  padding: 0 .1rem;
+  border-bottom: 1px solid #cbcbcb;
+  box-sizing: border-box;
+}
+#main .productDetail .price .wangZhi img {
+  vertical-align: middle;
+}
+#main .productDetail .price .gobuy button {
+  background-color: orange;
+  vertical-align: middle;
+  padding: .05rem;
+  color: #fff;
+}
+#main .productDetail .detail {
+  padding: .1rem;
+  font-size: .12rem;
+  color: #878787;
+}
+#main .pingLun {
+  border-top: 2px solid #a9a9a9;
+}
+#main .pingLun .title {
+  background-color: #a9a9a9;
+  line-height: 40px;
+  text-align: center;
+  margin-top: .02rem;
+}
+#main .pingLun ul li {
+  padding: .1rem;
+  color: grey;
+  border-bottom: 1px solid grey;
+}
+#main .pingLun ul li .data {
+  font-size: .12rem;
+}
+#main .pingLun ul li .star {
+  font-size: .12rem;
+}
+#main .pingLun ul li .star img {
+  width: .18rem;
+  height: .18rem;
+  vertical-align: bottom;
+}
+.mui-scroll-wrapper {
+  position: relative;
+  height: 100%;
+}

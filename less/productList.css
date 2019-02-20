@@ -1,0 +1,236 @@
+html {
+  font-size: 26.6666vw;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: .14rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/* 头部区域 */
+#header .logo {
+  padding: .1rem .1rem .1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fe4e49;
+}
+#header .logo a {
+  display: block;
+}
+#header .logo a i {
+  color: #fff;
+  font-size: .22rem;
+  line-height: .3rem;
+}
+#header .logo a img {
+  display: block;
+  width: 1.85rem;
+  height: .25rem;
+}
+#header .logo a:last-of-type img {
+  width: .35rem;
+  height: .35rem;
+}
+#header .logo a:first-of-type {
+  padding-top: .05rem;
+}
+#header .logo span {
+  color: #fff;
+  font-size: .22rem;
+  font-weight: 700;
+  line-height: .35rem;
+}
+#header .search {
+  padding: .1rem;
+}
+#header .search form {
+  display: flex;
+  justify-content: space-between;
+}
+#header .search form input {
+  width: 2.85rem;
+  height: .3rem;
+  border-radius: .3rem;
+  border: none;
+  padding: 0 .2rem;
+  background-color: #f0f0f0;
+  margin-bottom: 0;
+}
+#header .search form input::placeholder {
+  font-size: .12rem;
+  color: #555555;
+}
+#header .search form button {
+  width: .63rem;
+  height: .3rem;
+  border-radius: .3rem;
+  border: none;
+  background-color: #555555;
+  color: #fff;
+}
+/* 底部区域 */
+#footer {
+  background-color: #222933;
+}
+#footer .foot-top {
+  display: flex;
+  border: 1px solid #717171;
+}
+  #footer .foot-top a {
+    color: #fff;
+    line-height: .35rem;
+    text-align: center;
+  }
+  #footer .foot-top a:nth-of-type(2) {
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+  }
+#footer .foot-top .top {
+  width: 40%;
+  border-right: none;
+}
+#footer .foot-top .top img {
+  vertical-align: middle;
+}
+#footer .foot {
+  text-align: center;
+  font-size: .12rem;
+}
+#footer .foot .load {
+  padding: .15rem 0;
+}
+#footer .foot .load a {
+  display: inline-block;
+  color: #fe4e49;
+}
+#footer .foot .load span {
+  color: #bdbdbd;
+}
+#footer .foot p {
+  color: #506565;
+  padding-bottom: .2rem;
+}
+#header .list {
+  height: .4rem;
+  background-color: #e8e8e8;
+  padding: 0 .2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header .list .left {
+  display: inline-block;
+}
+#header .list button {
+  height: .3rem;
+  width: .6rem;
+  line-height: .3rem;
+  padding: 0;
+}
+#main .product li {
+  padding: .1rem .08rem;
+  margin-bottom: .1rem;
+  border-bottom: 1px solid #cbcbcb;
+  display: flex;
+}
+#main .product li .left {
+  display: inline-block;
+}
+#main .product li .left img {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: bottom;
+}
+#main .product li .right {
+  display: inline-block;
+  margin-left: .1rem;
+}
+#main .product li .right p {
+  color: black;
+}
+#main .product li .right .star {
+  display: flex;
+  justify-content: space-between;
+  font-size: .12rem;
+  color: #a0a0a0;
+}
+#main .product li .right .star span:first-of-type {
+  color: #e93803;
+  font-size: .2rem;
+}
+#main .product li .right .star span:last-of-type img {
+  width: .18rem;
+  height: .18rem;
+}
+#main .product li .right .other {
+  margin-top: .15rem;
+  padding-right: .15rem;
+  float: right;
+  font-size: .12rem;
+  color: #cbcbcb;
+}
+#main .page {
+  margin-top: .3rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 .2rem;
+  margin-bottom: .15rem;
+}
+#main .page button {
+  width: .8rem;
+  line-height: 0;
+  height: .3rem;
+}
+#main .page .select {
+  border: 1px solid #d8d8d8;
+}
+#main .page .select #select {
+  width: 1rem;
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: 0;
+  font-size: .16rem;
+  line-height: .3rem;
+  padding-left: .3rem;
+}
+#main .page .select #select option {
+  text-align: center;
+}
+#main .section2 {
+  margin-bottom: .3rem;
+}
+#main .section2 .title {
+  height: .35rem;
+  background-color: #fe4e49;
+  padding: 0 .1rem;
+  color: #fff;
+}
+#main .section2 .title span {
+  line-height: .35rem;
+}
+#main .section2 .title a {
+  display: inline-block;
+  float: right;
+  line-height: .35rem;
+}
+#main .section2 .title a img {
+  width: .2rem;
+  height: .2rem;
+  vertical-align: middle;
+}
+.mui-scroll-wrapper {
+  position: relative;
+  height: 100%;
+}

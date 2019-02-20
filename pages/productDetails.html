@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入第三方库MUI -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 引入字体图标库的css文件 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入自己的less文件 -->
+    <link rel="stylesheet" href="./less/productDetails.css">
+    
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="logo">
+            <a href=""><img src="images/header_logo.png" alt=""></a>
+            <a href=""><img src="images/header_app.png" alt=""></a>
+        </div>
+        <div class="list">
+            <div class="left">
+                <span><a href="index.html">首页</a></span>
+                <span>></span>
+                <span><a href="category.html">全部分类</a></span>
+                <span>></span>
+            </div>
+            <button>筛选</button>
+        </div>
+    </header>
+    <!-- 滚动部分 -->
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--这里放置真实显示的DOM内容-->
+            <!-- 主体区域 -->
+            <main id="main">
+                <div class="productDetail">
+                    
+                </div>
+                <div class="pingLun">
+                    <div class="title">
+                        网友评论
+                    </div>
+                    <ul class="content">
+                        
+                       
+                    </ul>
+                </div>
+            </main>
+            <!-- 底部区域 -->
+            <footer id="footer">
+                <div class="foot-top mui-row">
+                    <a href="login.html" class="mui-col-xs-4">登录</a>
+                    <a href="register.html" class="mui-col-xs-4">注册</a>
+                    <a href="javascript: void(0)" class="top-back mui-col-xs-4"><img src="images/top.png" alt=""><span>返回顶部</span></a>
+                </div>
+                <div class="foot">
+                    <div class="load">
+                        <a href="#">
+                            手机APP下载
+                        </a>
+                        <span>慢慢买手机版 -- 掌上比价平台</span>
+                    </div>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+
+    <!-- 引入MUI的js文件 -->
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- 引入zepto -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入自己的js文件 -->
+    <script src="./js/productDetails.js"></script>
+
+    <!-- 创建商品详情模板 -->
+    <script id="productTpl" type="text/html">
+        <p>{{list.productName}}</p>
+        <img src="{{list.productImg}}" alt="" class="productImg">
+        <img src="images/sc.jpg" alt="" class="shouCang">
+        <div class="three mui-row">
+            <div class="mui-col-xs-4">比价购买</div>
+            <div class="mui-col-xs-4">产品参数</div>
+            <div class="mui-col-xs-4">优选评论</div>
+        </div>
+        <div class="price">
+            <a href="#" class="wangZhi">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/161.png" alt="">
+                <span>飞牛网</span>
+            </a>
+            <div class="gobuy mui-pull-right">
+                <span>¥2499.00</span>
+                <button type="button">去购买</button>
+            </div>
+        </div>
+        <div class="detail">
+                * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </div>  
+    </script>
+
+    <!-- 创建评论模板 -->
+    <script id="pingLunTpl" type="text/html">
+        {{each result value index}} 
+            <li>
+                <div class="data">
+                    <span>{{value.comName}}</span>
+                    <span class="mui-pull-right">{{value.comTime}}</span>
+                </div>
+                <div class="star">
+                    <span>
+                        <img src="images/star.svg" alt="">
+                        <img src="images/star.svg" alt="">
+                        <img src="images/star.svg" alt="">
+                        <img src="images/star.svg" alt="">
+                        <img src="images/star.svg" alt="">
+                    </span>
+                    <span class="mui-pull-right">{{value.comFrom}}</span>
+                </div>
+                <div class="wenZi">
+                    {{value.comContent}}
+                </div>
+            </li>
+        {{/each}}
+    </script>
+
+    
+</body>
+</html>
