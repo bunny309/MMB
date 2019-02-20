@@ -1,7 +1,8 @@
 $(function () {
 
-    let allScroll;
-    // 页面初始首次请求
+    let allScroll; // 全局的iscroll插件对象引用
+
+    // 导航栏渲染
     $.ajax({
         url: "http://localhost:9090/api/getbaicaijiatitle",
         success: function (res) {
@@ -11,6 +12,7 @@ $(function () {
         }
     });
 
+    // 渲染函数
     function render(id) {
         $.ajax({
         url: "http://localhost:9090/api/getbaicaijiaproduct",
@@ -79,10 +81,11 @@ $(function () {
     });
     }
 
+    // 页面首次渲染
     render(1);
     
 
-
+    // 侧边栏显示,隐藏
     $('#header .left').on('tap', function () {
         mui('.mui-off-canvas-wrap').offCanvas('show');
     });
@@ -90,13 +93,7 @@ $(function () {
         mui('.mui-off-canvas-wrap').offCanvas('close');
     });
 
-    // mui('.bar100').progressbar({progress:77}).show();
-    // mui('.bar3').progressbar({progress:55}).show();
-    // mui('.bar4').progressbar({progress:15}).show();
-
-
-   
-   
+    // 返回顶部按钮功能
     $('.content')[0].addEventListener('touchmove', function() {
         console.log($('.content').css()[0].style.transform.match(/\d+/g)[1]);
         let y = $('.content').css()[0].style.transform.match(/\d+/g)[1] - 0;
@@ -109,7 +106,12 @@ $(function () {
        allScroll.scrollTo(0, 0, 1000);
     })
 
-    // 分类渲染
+    // 首页跳转
+    $('#header .title').on('tap', function(){
+        location = '../index.html';
+    })
+
+    // 分页面渲染
     $('.nav-box').on('tap', 'a', function(){
         console.log(this);
         let id = $(this).data('id');
@@ -121,36 +123,33 @@ $(function () {
 });
 
 // 慢慢买 MMP类
-class MMP {
-    // 公共属性
-    constructor() {
+// class MMP {
+//     // 公共属性
+//     constructor() {
 
-    }
+//     }
 
-    // 初始化模块
-    init() {
+//     // 初始化模块
+//     init() {
 
-    }
+//     }
 
-    // 渲染模块
-    render() {
+//     // 渲染模块
+//     render() {
 
-    }
+//     }
 
-    // 顶部返回
-    toTop() {
+//     // 顶部返回
+//     toTop() {
 
-    }
+//     }
 
-    // 主,侧页面切换
-    switchPage() {
+//     // 主,侧页面切换
+//     switchPage() {
 
-    }
+//     }
 
-    
-
-
-}
+// }
 
 
 
