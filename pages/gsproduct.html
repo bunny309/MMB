@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>凑单品</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../less/gsproduct.css">
+
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="left">
+            <a href="javascipt:history:back(-1);" class="mui-icon mui-icon-back"></a>
+        </div>
+        <div class="right">
+            <h1>凑单品</h1>
+        </div>
+    </header>
+
+    <!-- 导航栏区域 -->
+    <div id="mmb-nav">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-collapse">
+                <a href="#" class="mui-navigate-right shop-title" data-shop-id="0">京东</a>
+                <div class="mui-collapse-content">
+                    <ul class="mui-table-view mmb-Shop nav-content">
+                        <li class="mui-table-view-cell">京东</li>
+                    </ul>
+
+                </div>
+            </li>
+            <li class="mui-table-view-cell mui-collapse">
+                <a href="#" class="mui-navigate-right area-title" data-area-id="0">华南</a>
+                <div class="mui-collapse-content">
+                    <ul class="mui-table-view mmb-area nav-content">
+                        <li class="mui-table-view-cell">华北（北京、山西等）</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="mui-table-view-cell mui-collapse">
+                <a class="mui-navigate-right" href="#">全部价格</a>
+                <div class="mui-collapse-content">
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell">全部价格</li>
+                        <li class="mui-table-view-cell">1-3元</li>
+                        <li class="mui-table-view-cell">3-5元</li>
+                        <li class="mui-table-view-cell">5-10元</li>
+                        <li class="mui-table-view-cell">10-15元</li>
+                        <li class="mui-table-view-cell">15元以上</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="mmb-content">
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-row product-list">
+                    <div class="mui-col-xs-6 mmb-product">
+                        <a href="#">
+                            <img src="http://img10.360buyimg.com/n7/jfs/t19060/5/910357763/42361/34397ce9/5ab1d14eN03767068.jpg"
+                                alt="">
+                            <p class="title"> &nbsp;海尔 海尔 测试-笔记本回收</p>
+                            <p class="price"> ￥ <span>0.01</span></p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-6 mmb-product">
+                        <a href="#">
+                            <img src="http://img10.360buyimg.com/n7/jfs/t21436/54/1234860341/89804/35a3f292/5b239b20N7eb365b2.jpg"
+                                alt="">
+                            <p class="title"> &nbsp;海尔 海尔 测试-笔记本回收</p>
+                            <p class="price"> ￥ <span>0.01</span></p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-6 mmb-product">
+                        <a href="#">
+                            <img src="http://img10.360buyimg.com/n7/jfs/t21436/54/1234860341/89804/35a3f292/5b239b20N7eb365b2.jpg"
+                                alt="">
+                            <p class="title"> &nbsp;海尔 海尔 测试-笔记本回收</p>
+                            <p class="price"> ￥ <span>0.01</span></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 生成店铺名的模板 -->
+    <script type="text/html" id="mmbShopTpl">
+        {{each result value index}}
+        <li class="mui-table-view-cell mmb-shopList" data-shop-id="{{value.shopId}}">{{value.shopName}}</li>
+        {{/each}}
+    </script>
+
+    <!-- 生成地区的模板 -->
+    <script type="text/html" id="areaTpl">
+        {{each result value index}}
+        <li class="mui-table-view-cell area-list" data-area-id="{{value.areaId}}">{{value.areaName}}</li>
+        {{/each}}
+    </script>
+
+
+
+
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../js/gsproduct.js"></script>
+    <!-- 产品块的生产模板 -->
+    <script type="text/html" id="productTpl">
+        {{each data value index}}
+        
+        <div class="mui-col-xs-6 mmb-product">
+            <a href="#">
+                <img src="{{value.productImg}}" alt="">
+                <p class="title"> &nbsp;{{value.productName}}</p>
+                <p class="price"> ￥ <span>{{value.productPrice}}</span></p>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+</body>
+
+</html>
