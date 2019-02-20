@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入第三方库MUI -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 引入字体图标库的css文件 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入自己的less文件 -->
+    <link rel="stylesheet" href="./less/productList.css">
+    
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="logo">
+            <a href=""><img src="images/header_logo.png" alt=""></a>
+            <a href=""><img src="images/header_app.png" alt=""></a>
+        </div>
+        <div class="list">
+            <div class="left">
+                
+            </div>
+            <button>筛选</button>
+        </div>
+    </header>
+    <!-- 滚动部分 -->
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--这里放置真实显示的DOM内容-->
+            <!-- 主体区域 -->
+            <main id="main">
+                <ul class="product">
+
+                </ul>
+                <div class="page">
+                    <button type="button" class="prev-btn">上一页</button>
+                    <div class="select">
+                        <select name="" id="select">
+                            <option value="1">1/4</option>
+                            <option value="2">2/4</option>
+                        </select>
+                    </div>
+                    <button type="button" class="next-btn">下一页</button>
+                </div>
+                <div class="section2">
+                    <div class="title">
+                        <span>品牌排行</span>
+                        <a href=""><img src="images/more.png" alt=""></a>
+                    </div>
+                </div>
+            </main>
+            <!-- 底部区域 -->
+            <footer id="footer">
+                <div class="foot-top mui-row">
+                    <a href="login.html" class="mui-col-xs-4">登录</a>
+                    <a href="register.html" class="mui-col-xs-4">注册</a>
+                    <a href="javascript: void()" class="top-back mui-col-xs-4"><img src="images/top.png" alt=""><span>返回顶部</span></a>
+                </div>
+                <div class="foot">
+                    <div class="load">
+                        <a href="#">
+                            手机APP下载
+                        </a>
+                        <span>慢慢买手机版 -- 掌上比价平台</span>
+                    </div>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+
+    <!-- 引入MUI的js文件 -->
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- 引入zepto -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入自己的js文件 -->
+    <script src="./js/productList.js"></script>
+
+    <!-- 创建商品列表模板 -->
+    <script id="productTpl" type="text/html">
+        {{ each result value index}}
+            <li data-brandid="{{value.productId}}">
+                <div class="left">
+                    <img src="{{ value.productImg }}" alt="">
+                </div>
+                <div class="right">
+                    <p class="tit">
+                        {{value.productName}}
+                    </p>
+                    <div class="star">
+                        <span>{{ value.productPrice }}</span>
+                        <span>
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                        </span>
+                    </div>
+                    <div class="other">
+                        <span>{{value.productCom}}</span>
+                        <span>{{ value.productQuote}}</span>
+                    </div>
+                </div>
+            </li>
+        {{ /each }}
+    </script>
+    <!-- 创建分类名称模板 -->
+    <script id="nameTpl" type="text/html">
+        {{each result value index}}
+            <span><a href="index.html">首页</a></span>
+            <span>></span>
+            <span><a href="category.html">全部分类</a></span>
+            <span>></span>
+            <span><a href="">{{value.category}}</a></span>
+        {{/each}}
+    </script>
+</body>
+</html>
