@@ -33,8 +33,8 @@
             </div>
         </div>
         <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted header-scroll">
-            <ul class="mui-scroll">
-                <li class="mui-control-item mui-active">
+            <ul class="mui-scroll header-scroll-box">
+                <li class="mui-control-item">
                     首页
                 </li>
                 <li class="mui-control-item">
@@ -46,7 +46,7 @@
                 <li class="mui-control-item">
                     比价搜索
                 </li>
-                <li class="mui-control-item">
+                <li class="mui-control-item mui-active">
                     国内折扣
                 </li>
                 <li class="mui-control-item">
@@ -62,17 +62,14 @@
 
     <!-- 主体部分 -->
     <div id="main">
-        <div id="pullrefresh" class="mui-scroll-wrapper">
-            <!-- 下拉刷新的子容器 -->
-            <div class="mui-scroll">
-                <!-- 真实下拉刷新的内容 -->
+        
+              
                 <ul class='contentList'>
 
 
                 </ul>
 
-            </div>
-        </div>
+         
     </div>
 
     <!-- 底部 -->
@@ -96,18 +93,30 @@
     </div>
     <!-- {{each value list key}} -->
     <!-- {{/each}} -->
+        <!-- <% for(var i = 0;i < list.length;i++){ %> -->
+
+
+
+            <!-- 头部模板 -->
+    <script id="headerScroll" type="text/html">
+        {{each result val index}}
+        <li class="mui-control-item {{index == 4 ? 'mui-active' : ''}}" data-id='{{val.indexmenuId}}' data-href='{{val.titlehref}}'>
+            {{val.name}}
+        </li>
+        {{/each}}
+    </script>
     <!--数据模板  -->
     <script type="text/template" id="inlandList">
-        <% for(var i = 0;i < list.length;i++){ %>
-        <li class="content" data-id='{{@list[i].productId}}'>
+        {{each list value key}}
+        <li class="content" data-id='{{@value.productId}}'>
             <div > 
-                {{@list[i].productImg}}
-                <div class="desc">{{@list[i].productName}}</div>
-                <div class="price">￥{{@list[i].productPrice}}</div>
-                <div class="addr">{{list[i].productFrom}} | 2019/2/18 9:45</div>
+                {{@value.productImg}}
+                <div class="desc">{{@value.productName}}</div>
+                <div class="price">￥{{@value.productPrice}}</div>
+                <div class="addr">{{value.productFrom}} | {{value.productTime}}</div>
             </div>
         </li>
-    <% } %>
+    {{/each}}
     </script>
 
 
@@ -120,7 +129,6 @@
     <!-- 引入artTemplate的js 创建模板 渲染数据 -->
     <script src="../lib/artTemplate/template-web.js"></script>
     <!-- 引入自身的js -->
-    <script src="../js/bunny309_base.js"></script>
     <script src="../js/inlanddiscount.js"></script>
 </body>
 

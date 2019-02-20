@@ -1,3 +1,4 @@
+document.write("<script src='/bunny309_base.js'></script>");
 $(function () {
 
     // 获取inlanddiscount.html传来的id
@@ -55,10 +56,17 @@ $(function () {
 
 
         // for (var i = 0; i < 100; i++) {
-            $('.list ul').html('<li></li>').append(con);
+        $('.list ul').html('<li></li>').append(con);
         // }
         $('textarea').val('');
 
     })
+
+
+    // 点击头部【慢慢买】跳转到首页
+    $('.header-box').on('tap', function () {
+        location = "../index.html";
+    })
+
 
 })
