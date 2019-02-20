@@ -1,0 +1,235 @@
+@main-color: #ff9000;
+@border-color: #cccccc;
+
+// 设置根目录html的字体大小
+html {
+    font-size: 26.66667vw;
+}
+
+// 公共样式
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 移动端按住元素取消高亮背景色 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font: 0.14rem/100% '微软雅黑', '宋体', '黑体';
+    background-color: #fff;
+    color: black;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666666;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+input,
+button,
+select {
+    border: none;
+    outline: none;
+}
+
+i {
+    font-style: normal;
+}
+
+table {
+    // 合并边框模型
+    border-collapse: collapse;
+    // 相邻单位格的边框距离
+    border-spacing: 0;
+}
+
+.clearfix::after {
+    content: '';
+    display: none;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+// 自定义border边框
+.border-top {
+    border-top: 1px solid @border-color;
+}
+
+.border-right {
+    border-right: 1px solid @border-color;
+}
+
+.border-bottom {
+    border-bottom: 1px solid @border-color;
+}
+
+.border-left {
+    border-left: 1px solid @border-color;
+}
+
+// 头部样式
+#header {
+    position: fixed;
+    z-index: 999;
+    background-color: #fff;
+
+    .header-box {
+        height: 0.45rem;
+        width: 100vw;
+        display: flex;
+        padding: 0.09rem 0.1rem;
+        border-bottom: 1px solid @border-color;
+
+        .logo {
+            width: 0.85rem;
+            background-image: url(http://static.manmanbuy.com/m/img/mlogo.png);
+            background-repeat: no-repeat;
+            background-size: 0.84rem 0.25rem;
+            overflow: hidden;
+            text-indent: -999px;
+        }
+
+        .search {
+            flex: 1;
+
+            form {
+                padding: 0 0.2rem;
+                position: relative;
+
+                i {
+                    position: absolute;
+                    top: 0.06rem;
+                    left: 0.3rem;
+                    color: #ccc
+                }
+
+                input {
+                    height: 0.28rem;
+                    font-size: 0.12rem;
+                    border-radius: 0.2rem;
+                    text-align: left;
+                    padding-left: 0.3rem;
+                    background-color: #eee;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .download {
+            width: 0.4rem;
+            height: 0.2rem;
+            margin-top: 0.02rem;
+            border: 1px solid #f04848;
+            border-radius: 0.2rem;
+
+            p {
+                color: #f04848;
+                text-align: center;
+                margin-bottom: 0;
+                line-height: 0.18rem;
+                font-size: 0.12rem;
+            }
+        }
+    }
+
+    .header-scroll {
+        border-bottom: 1px solid @border-color;
+        height: 0.4rem;
+
+        ul {
+            height: 100%;
+
+            li {
+                padding: 0 0.12rem;
+                font-weight: 600;
+                color: black;
+                position: relative;
+                height: 100%;
+                font-size: 0.14rem;
+                line-height: 0.4rem;
+
+                &.mui-active {
+                    color: @main-color;
+                    border-bottom: 0;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        height: 0.03rem;
+                        ;
+                        width: 0.4rem;
+                        background-color: @main-color;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#main {
+    padding-top: 0.85rem;
+
+}
+
+#footer {
+    background-color: #232a34;
+    color: #ffffff;
+    // display: flex;
+
+    .footer-title {
+        height: 0.35rem;
+
+        div {
+            text-align: center;
+            line-height: 0.35rem;
+
+            .fa-arrow-circle-up {
+                font-size: 0.14rem;
+                color: #ffffff;
+            }
+        }
+    }
+
+    .footer-content {
+        width: 100%;
+        height: 0.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        p {
+            font-size: 0.12rem;
+            margin-bottom: 0;
+            line-height: 0.2rem;
+        }
+        .footer-content-name{
+            color: #ccc;
+            span{
+                color: red;
+            }
+        }
+    }
+}

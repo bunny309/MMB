@@ -1,0 +1,67 @@
+@import 'bunny309_base.less';
+html,body{
+height: 100vh;
+}
+#main {
+    width: 100%;
+    // padding-top: 0.5rem;
+    height: 100%;
+    position: relative;
+    
+    #pullrefresh{
+        top:.8rem;
+        bottom: .6rem;
+    }
+    ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgb(255, 192, 203);
+
+        li {
+            width: 50%;
+            background-color: #fff;
+            
+            // float: left;
+            text-align: center;
+            padding: .1rem;
+
+            div {
+
+
+                img {
+                    width: 70%;
+                }
+
+                .desc {
+                    text-align: left;
+                    font-size: .12rem;
+                    font-weight: bold;
+                    color: black;
+                }
+
+                .price {
+                    text-align: left;
+                    font-size: .12rem;
+                    color: #ff6c00;
+                }
+
+                .addr {
+                    margin-top: .1rem;
+                    text-align: left;
+                    font-size: .1rem;
+                    color: #999;
+                    // margin-top: .1rem;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 999;
+
+}
